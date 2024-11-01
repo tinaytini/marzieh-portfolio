@@ -1,7 +1,7 @@
 #projects {
-  background-color: $white-color;
-  color: $dark-blue-text;
-  margin-top: -10rem;
+  background-color: $dark-grey;
+  color: $white-color;
+  margin-top: -14rem;
   padding-top: 15rem;
 
   @include respond(tab-land) {
@@ -15,9 +15,31 @@
     @include respond(phone) {
       margin-bottom: 0rem;
     }
-
+    .project__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
     .row {
-      margin-bottom: 8rem;
+      width: 22%;
+      margin: 10px 8px;
+      padding: 0;
+      color: #fff;
+      display: flex;
+
+      
+      .card {
+        padding: 0 !important;
+        border: none;
+        background: transparent;
+      }
+
+      .card__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
 
       @include respond(phone) {
         margin-bottom: 4rem;
@@ -26,18 +48,20 @@
 
     &__text {
       text-align: left;
+      background-color: #00cdac;
+      border-radius: 20px 20px 0 0;
 
       @include respond(phone) {
         margin-bottom: 2.5rem !important;
       }
-      @include respond(tab-land) {
-        margin-bottom: 4.8rem;
-      }
+      // @include respond(tab-land) {
+      //   margin-bottom: 4.8rem;
+      // }
 
       &-title {
         font-weight: bold;
-        margin-bottom: 1.8rem;
-        font-size: $mid-font-size;
+        font-size: $card-title-size;
+        padding: 10px 14px;
 
         @include respond(phone) {
           font-size: 2rem;
@@ -50,11 +74,11 @@
     }
 
     &__image {
-      width: 90%;
+      max-width: 112%;
       margin: 0 auto;
 
       @include respond(tab-land) {
-        width: 100%;
+        min-width: 100%;
         margin: 0;
       }
 
